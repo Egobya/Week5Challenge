@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/">show ALL Pets</a><br />
+Pet_name :<span th:text="${pet.pet_name}"></span><br />
+Petownwer :<span th:text="${pet.petowner}"></span><br />
+Animal_type :<p th:text="${pet.animal_type}"></p>
+<a th:href="@{/delete/{id}(id=${pet.id})}">Delete this pet</a>
+
+</body>
+</html>

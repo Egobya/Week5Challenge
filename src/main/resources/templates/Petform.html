@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/process}"/>
+th:object="${pet}"
+method="post">
+<input type=" text" th:field="*{id}" />
+Pet_name input type="text" th:field="*{pet_name}"
+<span>th: if="${#fields.hasErrors('pet_name')}"
+      th:errors="*{pet_name}"></span><br />
+
+Pet_age input type="text" th:field="*{pet_age}"
+<span>th: if="${#fields.hasErrors('pet_age')}"
+      th:errors="*{pet_age}"></span><br />
+
+Animal_type :<input type="text"  th:field="*{animal_type}" />
+<span th:if="${#fields.hasErrors('animal_type')}"
+      th:errors="*{animal_type}"></span><br />
+
+Pet_color :<input type="text" th:field="*{pet_color}" />
+<span th:if="${#fields.hasErrors('pet_color')}"
+      th:errors="*{pet_color}"></span><br />
+
+
+Petowner_contactnum:<input type="text" th:field="*{Petowner_contactnum}" />
+<span th:if="${#fields.hasErrors('Petowner_contactnum')}"
+      th:errors="*{Petowner_contactnum}"></span><br />
+
+<br />
+<input type="submit" value="Submit" />
+</form>
+
+
+</body>
+</html>
